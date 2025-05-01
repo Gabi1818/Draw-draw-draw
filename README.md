@@ -2,8 +2,11 @@ Aplikace zaznamenává souřadnice kliknutí myší na plátně.
 Podle toho v jakém "módu" se zrovna nachází umí vykreslit buď čáru nebo obrazec, který dopočítá z daných 2 bodů čáry.
 
 Uživatel může měnit módy pomocí tlačítek nad plátnem. Po kliknutí na tlačítko program vypne módy, které jsou zapnuté a vzájemně se s novým vylučují:
+
 např. pokud uživatel kreslil kružnici a klikne na čtverec, program vypne mód kružnice
-pokud uživatel kreslil tečkovanou čáru a klikne na tlačítko rovné čáry, je možné nakreslit rovnou tečkovanou čáru
+
+pokud uživatel kreslil tečkovanou čáru a klikne na tlačítko rovné čáry, je možné nakreslit rovnou tečkovanou čáry
+
 
 Další tlačitka jsou:
 
@@ -35,11 +38,17 @@ Delete - najde nejbližší čáru a smaže si ji z listu čar a celé překresl
 
 Uživatel také může měnit existující čáry pravým tlačítkem myši. V tom případě program najde nejbližší bod, od bodu kam uživatel klikl a uživatel může daný bod "překreslit" jinam.
 
+
 LineCanvas si ukládá čáry do listu podle toho zda byla normální, tečkovaná, nebo čárkovaná, aby bylo možné čáry následně upravit.
+
 DashedLineRasterizer a DottedLineRasterizer vypočítávají mezery v čáře, aby bylo možné vynechat nějaké pixely při kreslení čáry a tím ji udělat čárkovanou nebo tečkovanou.
+
 BasicFiller si ukládá list pixelů, na které uživatel klikl při vybarvování. Když je potřeba překreslit plátno, projde všechny tyto pixely a udělá vybarvení znova.
 
+
+
 metody:
+
 paintCanvasSoFar()
 -vykreslí plátno, podle toho co je uložené v listech
 
