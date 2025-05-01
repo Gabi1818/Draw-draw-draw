@@ -2,23 +2,37 @@ Aplikace zaznamenává souřadnice kliknutí myší na plátně.
 Podle toho v jakém "módu" se zrovna nachází umí vykreslit buď čáru nebo obrazec, který dopočítá z daných 2 bodů čáry.
 
 Uživatel může měnit módy pomocí tlačítek nad plátnem. Po kliknutí na tlačítko program vypne módy, které jsou zapnuté a vzájemně se s novým vylučují:
-    např. pokud uživatel kreslil kružnici a klikne na čtverec, program vypne mód kružnice
-    pokud uživatel kreslil tečkovanou čáru a klikne na tlačítko rovné čáry, je možné nakreslit rovnou tečkovanou čáru
+např. pokud uživatel kreslil kružnici a klikne na čtverec, program vypne mód kružnice
+pokud uživatel kreslil tečkovanou čáru a klikne na tlačítko rovné čáry, je možné nakreslit rovnou tečkovanou čáru
 
 Další tlačitka jsou:
-    Clear - vyčistí plátno a body, které si program pamatuje (začíná od znova)
-    Color - nechá uživatele vybrat barvu, kterou si program uloží do proměnné a na všechno pak používá tuhle barvu
-    Circle - podle čáry, kterou uživatel nakreslí program dopočítá kruh (uživatel vlastně zadá střed a poloměr)
-    Square - podle čáry, kterou uživatel nakreslí program dopočítá čtverec (uživatel zadává úhlopříčku)
-    Rectangle - podle čáry, kterou uživatel nakreslí program dopočítá obdelník (uživatel zadává úhlopříčku)
-    Polygon - zachytává body, na které uživatel klikl a kreslí mezi nimi čáry, jakmile uživatel vypne tento mód, spojí poslední bod s prvním a tím polygon uzavře
-    Change Line Width - kolem původní čáry zadané uživatelem nakreslí 2 další a tím čáru rozšíří
-    Dotted Line - bude považovat čáru za čárkovanou - při vykreslování použije DottedLineRasterizer a čáru si uloží v LineCanvas do listu dottedLines
-    Dashed Line - bude považovat čáru za čárkovanou - při vykreslování použije DashedLineRasterizer a čáru si uloží v LineCanvas do listu dashedLines
-    Shift - přepočítá body tak, aby čára byla buď pod úhlem 90 nebo 45 stupňů
-    Fill - uloží si bod, kam uživatel klikl, aby se fill dal vykreslit znovu a projde všechny pixely v obrazci a změní jim barvu
-    Delete - najde nejbližší čáru a smaže si ji z listu čar a celé překreslí, aby čára zmizela
-    
+
+Clear - vyčistí plátno a body, které si program pamatuje (začíná od znova)
+
+Color - nechá uživatele vybrat barvu, kterou si program uloží do proměnné a na všechno pak používá tuhle barvu
+
+Circle - podle čáry, kterou uživatel nakreslí program dopočítá kruh (uživatel vlastně zadá střed a poloměr)
+
+Square - podle čáry, kterou uživatel nakreslí program dopočítá čtverec (uživatel zadává úhlopříčku)
+
+Rectangle - podle čáry, kterou uživatel nakreslí program dopočítá obdelník (uživatel zadává úhlopříčku)
+
+Polygon - zachytává body, na které uživatel klikl a kreslí mezi nimi čáry, jakmile uživatel vypne tento mód, spojí poslední bod s prvním a tím polygon uzavře
+
+Change Line Width - kolem původní čáry zadané uživatelem nakreslí 2 další a tím čáru rozšíří
+
+Dotted Line - bude považovat čáru za čárkovanou - při vykreslování použije DottedLineRasterizer a čáru si uloží v LineCanvas do listu dottedLines
+
+Dashed Line - bude považovat čáru za čárkovanou - při vykreslování použije DashedLineRasterizer a čáru si uloží v LineCanvas do listu dashedLines
+
+Shift - přepočítá body tak, aby čára byla buď pod úhlem 90 nebo 45 stupňů
+
+Fill - uloží si bod, kam uživatel klikl, aby se fill dal vykreslit znovu a projde všechny pixely v obrazci a změní jim barvu
+
+Delete - najde nejbližší čáru a smaže si ji z listu čar a celé překreslí, aby čára zmizela
+
+
+
 Uživatel také může měnit existující čáry pravým tlačítkem myši. V tom případě program najde nejbližší bod, od bodu kam uživatel klikl a uživatel může daný bod "překreslit" jinam.
 
 LineCanvas si ukládá čáry do listu podle toho zda byla normální, tečkovaná, nebo čárkovaná, aby bylo možné čáry následně upravit.
